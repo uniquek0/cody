@@ -29,4 +29,30 @@ drwxr-xr-x  12 root root 4096 Oct 25 10:24 usr
 drwxr-xr-x  11 root root 4096 Oct 25 10:26 var
 root@ae0dfd68f7ed:/# echo "Yuil"    
 Yuil
-root@ae0dfd68f7ed:/# 
+root@ae0dfd68f7ed:/# exit
+exit
+PS C:\Users\User> docker ps
+CONTAINER ID   IMAGE     COMMAND                   CREATED          STATUS          PORTS                                     NAMES
+1a09610651c8   nginx     "/docker-entrypoint.…"   11 minutes ago   Up 11 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   nginx
+PS C:\Users\User> docker attach my-ubuntu
+cannot attach to a stopped container, start it first
+PS C:\Users\User> docker start my-ubuntu
+my-ubuntu
+PS C:\Users\User> docker exec -it my-ubuntu bash
+root@ae0dfd68f7ed:/# exit
+exit
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug my-ubuntu
+    Learn more at https://docs.docker.com/go/debug-cli/
+PS C:\Users\User> docker ps
+CONTAINER ID   IMAGE     COMMAND                   CREATED          STATUS          PORTS                                     NAMES
+ae0dfd68f7ed   ubuntu    "/bin/bash"               5 minutes ago    Up 22 seconds                                             my-ubuntu
+1a09610651c8   nginx     "/docker-entrypoint.…"   12 minutes ago   Up 12 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   nginx
+PS C:\Users\User> docker attach my-ubuntu
+root@ae0dfd68f7ed:/# exit
+exit
+PS C:\Users\User> docker ps
+CONTAINER ID   IMAGE     COMMAND                   CREATED          STATUS          PORTS                                     NAMES
+1a09610651c8   nginx     "/docker-entrypoint.…"   14 minutes ago   Up 14 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   nginx
+PS C:\Users\User> 
