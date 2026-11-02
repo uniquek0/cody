@@ -187,3 +187,7 @@ Share images, automate workflows, and more with a free Docker ID:
 
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
+
+C:\Users\User> docker run -d -p 80:80 -v //Users/User:/usr/share/nginx/html nginx
+6c0342f3b2082c58e5128080563598a203d859ef7955f3ef38ca7ed5c892ae16
+
