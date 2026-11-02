@@ -1,10 +1,13 @@
 # cody
+
 -------------------------------------------------------------
 Project title : Codyssey Daejeon AI All-in-One Week01
+
 -------------------------------------------------------------
 Project overview : 
 1. GitHub 계정에 연동하기
 2. Docker/Dockerfile 체험하기
+
 -------------------------------------------------------------
 Checklist/HowToCheck : 다음 파일들을 체크해보시면 됩니다. 
 
@@ -19,6 +22,7 @@ dockerfile_image - dockerfile을 이용해서 이미지를 만드는 예시. 여
 git_logs - github에서 접속 후, repository에 접근한 git bash 로그. git을 컴퓨터에 설치 하고 git bash로 진행하였으며, 안에서 unique 폴더에 repository를 연결한 후 make directory와 file을 한 후, 이를 commit 및 push 해보았음. 이를 확이낳기 위해서는 실제로 github 웹페이지에 들어가 보면 됨. 잘 push된 것을 확인. 또한 연동 잘 되었는지 확인을 위해 github_auth 스크린샷을 찍었음.
 
 github_auth - github 연동 스크린샷. 
+
 -------------------------------------------------------------
 Troubleshoot :
 Docker 설치 과정에서 오류가 두 번이나 발생. 
