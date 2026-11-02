@@ -2,10 +2,10 @@
 
 Project title : Codyssey Daejeon AI All-in-One Week01
 Project overview : 
-1. Make a new GitHub Repository(which is the current one), which is public. Then try commit/push.
-2. Install and Try Docker/Dockerfile
+1. GitHub 계정에 연동하기
+2. Docker/Dockerfile 체험하기
 Checklist/HowToCheck :
 
 Troubleshoot :
-Docker installation in Microsoft Store - It is 
+Docker
 
