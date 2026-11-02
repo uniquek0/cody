@@ -115,3 +115,19 @@ IMAGE   ID             DISK USAGE   CONTENT SIZE   EXTRA
 
 C:\Users\User>docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+C:\Users\User>docker run -d --name nginx -p 8080:80 nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+a670537bed70: Pull complete
+9f604dae09b2: Pull complete
+6fc242d221a6: Pull complete
+c139fe92686d: Pull complete
+a071113ac575: Pull complete
+d322f1bf41d8: Pull complete
+6e2ab1f3ef4e: Pull complete
+ca81da665177: Download complete
+05a7d8870b4b: Download complete
+Digest: sha256:5ab5b0b01097420873a3f3330f44248e34a3c2a3e8d5ee30658aeae8cb7435da
+Status: Downloaded newer image for nginx:latest
+1a09610651c813c470a090500123fe8de2f044c81cdf21241bf12439762ed1cb
