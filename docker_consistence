@@ -1,0 +1,36 @@
+PS C:\Users\User> docker volume create my-persistence-vol
+my-persistence-vol
+PS C:\Users\User> # 볼륨을 연결하여 컨테이너 실행
+>> docker run -d --name worker-node -v my-persistence-vol:/app/data ubuntu sleep infinity
+>> 
+>> # 컨테이너 내부에 데이터 기록
+>> docker exec worker-node sh -c "echo 'Data Persistence Test - Success' > /app/data/result.txt"
+7439e4b6f68446f79498c0cddce988fe878bac416f62faa7d30387e244fcf463
+PS C:\Users\User> docker run -d --name worker-node -v my-persistence-vol:/app/data ubuntu sleep infinity
+docker: Error response from daemon: Conflict. The container name "/worker-node" is already in use by container "7439e4b6f68446f79498c0cddce988fe878bac416f62faa7d30387e244fcf463". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+
+What's next:
+    Debug this container error with Gordon → docker ai "help me fix this container error"
+PS C:\Users\User> docker exec worker-node sh -c "echo 'Data Persistence Test - Success' > /app/data/result.txt"
+PS C:\Users\User> docker exec worker-node cat /app/data/result.txt
+Data Persistence Test - Success
+PS C:\Users\User> docker rm -f worker-node
+worker-node
+PS C:\Users\User> docker ps -a | grep worker-node
+grep : 'grep' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 
+올바른지 검증한 다음 다시 시도하십시오.
+위치 줄:1 문자:16
++ docker ps -a | grep worker-node
++                ~~~~
+    + CategoryInfo          : ObjectNotFound: (grep:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\User> docker ps -a                   
+CONTAINER ID   IMAGE             COMMAND                   CREATED          STATUS                      PORTS                                     NAMES
+290c6649ed62   my-web-image:v1   "/docker-entrypoint.…"   24 minutes ago   Up 24 minutes               0.0.0.0:8888->80/tcp, [::]:8888->80/tcp   my-custom-web
+ae0dfd68f7ed   ubuntu            "/bin/bash"               37 minutes ago   Up 27 minutes                                                         my-ubuntu
+b7b90ba76ec3   hello-world       "/hello"                  38 minutes ago   Exited (0) 38 minutes ago                                             interesting_lewin
+1a09610651c8   nginx             "/docker-entrypoint.…"   43 minutes ago   Up 43 minutes               0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   nginx
+PS C:\Users\User> 
